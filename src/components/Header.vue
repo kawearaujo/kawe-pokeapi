@@ -57,6 +57,8 @@ header{
 nav{
     display: flex;
     justify-content: space-between;
+    height: 60px;
+    align-items: center;;
 }
 #menu-overlay{
     position: fixed;
@@ -98,5 +100,27 @@ ul li{
 
 ul li a{
     color: var(--color-text-light);
+}
+@media (min-width:700px) {
+    #menu-button,
+    #menu-logo,
+    #menu-overlay{
+        display: none;
+    }
+    #menu-items{
+        display: flex;
+        position: static;
+        height: 60px;
+        width: auto;
+    }
+    ul{
+        display: flex;
+        height: 60px;
+        align-items: center;
+    }
+    ul li{
+        margin: 0;
+        margin-left: 20px;
+    }
 }
 </style>
