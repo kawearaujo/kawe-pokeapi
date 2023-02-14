@@ -2,8 +2,8 @@
   <div id="app">
     
     <Header /> 
-    <!-- <router-view path="$router.key" /> -->
-    <Home />
+    <router-view path="$router.key" />
+    <!-- <Home /> -->
     <Footer /> 
   </div>
 </template>
@@ -13,12 +13,12 @@ import './styles/globals.css';
 
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Home from './pages/Home'
+// import Home from './pages/Home'
 export default {
   name: 'App',
   components: {
     Header,
-    Home,
+    // Home,
     Footer
   }
 }
