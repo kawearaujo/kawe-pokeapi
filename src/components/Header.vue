@@ -8,7 +8,8 @@
             <img v-on:click="openMenu" id="menu-button" alt="Abrir menu" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/menu.svg">
             <div v-on:click="closeMenu" id="menu-overlay" v-if="menuActive"></div>
             <div id="menu-items" :class="{active:menuActive}">
-                <img id="menu-logo" alt="menu-logo" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/wdev.svg">
+                <img id="menu-logo1" alt="logo" src="./../assets/logo.png">
+                <img id="menu-logo" alt="menu-logo" src="./../assets/pokedex_logo.png">
                 <ul>
                     <li v-on:click="closeMenu"><router-link to="/">Buscador</router-link></li>
                     <li v-on:click="closeMenu"><router-link to="/lista">Lista</router-link></li>
@@ -75,7 +76,11 @@ nav{
 }
 #menu-logo{
     width: 110px;
-    margin-top: 38px;
+    
+}
+#menu-logo1{
+    margin-top: 18px;
+    width: 50px;
 }
 #menu-items{
     position: fixed;
@@ -108,6 +113,7 @@ ul li a{
 
 @media (min-width:700px) {
     #menu-button,
+    #menu-logo1,
     #menu-logo,
     #menu-overlay{
         display: none;
