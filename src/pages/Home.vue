@@ -2,8 +2,7 @@
     <main>
         <div class="text-top">Videos novos toda <b>quinta</b> as <b>20h</b></div>
         <a href="https://youtube.com/" target="_blank">
-            <img id="subscribe" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/subscribe.svg
-" alt="Inscreva-se">
+            
         </a>
         <div class="text-bottom">Youtube</div>
     </main>

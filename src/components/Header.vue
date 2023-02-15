@@ -2,17 +2,18 @@
     <header>
         <nav class="container">
             <a href="/">
-                <img id="logo" alt="logo" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/wdev.svg">
+                <img id="logo" alt="logo" src="./../assets/logo.png">
+                <img id="pokedex" alt="logo" src="./../assets/pokedex_logo.png">
             </a>
             <img v-on:click="openMenu" id="menu-button" alt="Abrir menu" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/menu.svg">
             <div v-on:click="closeMenu" id="menu-overlay" v-if="menuActive"></div>
             <div id="menu-items" :class="{active:menuActive}">
                 <img id="menu-logo" alt="menu-logo" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/wdev.svg">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/videos">Video</a></li>
-                    <li><a href="/sobre">Sobre</a></li>
-                    <li><a href="/contato">Contato</a></li>
+                    <li v-on:click="closeMenu"><router-link to="/">Home</router-link></li>
+                    <li v-on:click="closeMenu"><router-link to="/videos">Video</router-link></li>
+                    <li v-on:click="closeMenu"><router-link to="/sobre">Sobre</router-link></li>
+                    <li v-on:click="closeMenu"><router-link to="/contato">Contato</router-link></li>
                 </ul>
             </div>
         </nav>
@@ -49,7 +50,10 @@ header{
     align-items: center;
 }
 #logo{
-    width: 130px;
+    width: 50px;
+}
+#pokedex{
+    width: 150px;
 }
 #menu-button{
     width: 30px;
@@ -101,6 +105,7 @@ ul li{
 ul li a{
     color: var(--color-text-light);
 }
+
 @media (min-width:700px) {
     #menu-button,
     #menu-logo,

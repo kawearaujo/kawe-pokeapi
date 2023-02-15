@@ -1,10 +1,10 @@
 :root {
-    --color-background:#F3F3F3;
-    --color-background-nav:#2B3D50;
-    --color-background-home:#344960;
-    --color-text-light:#EDEDED;
-    --color-text-title:#FF5555;
-    --color-text-dark:#3D3D3D;
+  --color-background: #F3F3F3;
+  --color-background-nav: #e11944;
+  --color-background-home: #202124;
+  --color-text-light: #EDEDED;
+  --color-text-title: #FF5555;
+  --color-text-dark: #3D3D3D;
   }
 
   *{
@@ -35,7 +35,14 @@
 
 main{
     width:100%;
-    height:calc(100vh - 120px);
+    min-height:calc(100vh - 120px);
     display:flex;
     flex-direction: column;
+
+}
+
+h1{
+  color:var(--color-text-title);
+  margin-top:40px 0;
+  font-size:30px;
 }
