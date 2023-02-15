@@ -5,18 +5,25 @@
         <img src="" alt="">
     <div class="text-bottom">Youtube</div> -->
     <main>
-        <div>
+        <div >
             <h1>Pokedex - PokeAPI</h1>
             <label for="search">Buscar:</label>
             <input id="search" v-model="searchTerm" @input="search" />
-            <div class="wrapPokemon" v-if="pokemon" :style="backgroundImage">
-                <h2 >{{ pokemon.name }}</h2>
-                <p>Number: {{ pokemon.id }}</p>
+            <br>
+            <div class="wrapPokemon" v-if="pokemon" >
+                <h2 >{{ pokemon.id }} - {{ pokemon.name }}</h2>
+                <!-- <p>Number: {{ pokemon.id }}</p> -->
                 <img :src="pokemon.gif" :alt="pokemon.name" />
-
+                <h3>Tipos:</h3>
+                <div v-if="pokemon.tipo2">
+                    <h4 >{{ pokemon.tipo1 }} - {{ pokemon.tipo2 }}</h4>
+                </div>
+                <div v-else>
+                    <h4 >{{ pokemon.tipo1 }}</h4>
+                </div>
             </div>
             <div class="wrapCard" v-else>
-                <!-- <img class="card" src="../assets/img/cardSeach.png"> -->
+                <img class="card" src="../assets/img/cardSeach.png">
             </div>
         </div>
 
@@ -35,7 +42,8 @@ export default{
             // pokemons:[],
             searchTerm: "",
             pokemon: null,
-            pokemonType: '',
+            pokemonType1: '',
+            pokemonType2: '',
             backgroundImage: ''
         }
     },
@@ -51,14 +59,27 @@ export default{
           `https://pokeapi.co/api/v2/pokemon/${this.searchTerm}`
         );
         const data = response.data;
-        this.pokemon = {
-          name: data.name,
-          id: data.id,
-          gif: data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'],
-          tipo: data.types[0].type.name
-        };
-        this.pokemonType = response.data.types[0].type.name;
-        this.backgroundImage = `background-image: url('../assets/arenaBg/${this.pokemonType}.png');`;
+        if(data.types[1]){
+            this.pokemon = {
+            name: data.name,
+            id: data.id,
+            gif: data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'],
+            tipo1: data.types[0].type.name,
+            tipo2: data.types[1].type.name
+            };
+            this.pokemonType2 = response.data.types[1].type.name;
+        }else{
+            this.pokemon = {
+            name: data.name,
+            id: data.id,
+            gif: data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'],
+            tipo1: data.types[0].type.name
+            };
+        }
+        this.pokemonType1 = response.data.types[0].type.name;
+        
+        this.backgroundImage = `background-image: url("../assets/arenaBg/${this.pokemonType}.png");`;
+        console.log(this.backgroundImage);
       } catch (error) {
         console.error(error);
         this.pokemon = null;
@@ -97,16 +118,32 @@ export default{
     }
     .wrapCard{
         display: flex;
-        height: 200px;
+        height: 250px;
         margin-top:20px ;
         justify-content: center;
         align-items: center;
-        /* background-color: rgb(183, 164, 207); */width: 50px;
-        background-color: src("../assets/img/cardSeach.png");
-        background-image: image("../assets/arenaBg/ice.png");
+        background-color: rgb(183, 164, 207);
+        /* background-color: src("../assets/img/cardSeach.png"); */
+        /* background-image: image("../assets/arenaBg/ice.png");  */
+        
     }
     .wrapPokemon {
-        
+        display: flex;
+        min-height: 250px;
+        /* margin-top:20px ;
+        padding-top: 20px; */
+        flex-direction: column;
+        /* justify-content: center; */
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(205, 203, 207);
+    }
+    .wrapPokemon img{
+        /* padding-top: 10px; */
+    }
+    .wrapPokemon h3{
+        /* padding-top: 20px;
+        padding-bottom: 10px; */
     }
     @media  (min-width: 700px){
         #subscribe{

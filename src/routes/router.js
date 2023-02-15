@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-import Home from '@/pages/Home';
+import Home from '@/pages/Pokemon';
 import Videos from '@/pages/Videos';
 import Sobre from '@/pages/Sobre';
 import Contato from '@/pages/Contatos';
