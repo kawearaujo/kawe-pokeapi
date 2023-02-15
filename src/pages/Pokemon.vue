@@ -138,13 +138,7 @@ export default{
         align-items: center;
         background-color: rgb(205, 203, 207);
     }
-    .wrapPokemon img{
-        /* padding-top: 10px; */
-    }
-    .wrapPokemon h3{
-        /* padding-top: 20px;
-        padding-bottom: 10px; */
-    }
+   
     @media  (min-width: 700px){
         #subscribe{
             width: 370px;
