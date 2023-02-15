@@ -10,8 +10,8 @@
             <div id="menu-items" :class="{active:menuActive}">
                 <img id="menu-logo" alt="menu-logo" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/wdev.svg">
                 <ul>
-                    <li v-on:click="closeMenu"><router-link to="/">Pokedex</router-link></li>
-                    <li v-on:click="closeMenu"><router-link to="/videos">Video</router-link></li>
+                    <li v-on:click="closeMenu"><router-link to="/">Buscador</router-link></li>
+                    <li v-on:click="closeMenu"><router-link to="/lista">Lista</router-link></li>
                     <li v-on:click="closeMenu"><router-link to="/sobre">Sobre</router-link></li>
                     <li v-on:click="closeMenu"><router-link to="/contato">Contato</router-link></li>
                 </ul>

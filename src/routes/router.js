@@ -3,19 +3,19 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-import Home from '@/pages/Pokemon';
-import Videos from '@/pages/Videos';
+import Pokemon from '@/pages/Pokemon';
+import Lista from '@/pages/Lista';
 import Sobre from '@/pages/Sobre';
 import Contato from '@/pages/Contatos';
 
 const routes = [
     {
         path:'/', 
-        component: Home
+        component: Pokemon
     },
     {
-        path:'/videos', 
-        component: Videos
+        path:'/lista', 
+        component: Lista
     },
     {
         path:'/sobre', 
