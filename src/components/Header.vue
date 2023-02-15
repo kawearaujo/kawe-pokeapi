@@ -14,7 +14,7 @@
                     <li v-on:click="closeMenu"><router-link to="/">Buscador</router-link></li>
                     <li v-on:click="closeMenu"><router-link to="/lista">Lista</router-link></li>
                     <li v-on:click="closeMenu"><router-link to="/sobre">Sobre</router-link></li>
-                    <li v-on:click="closeMenu"><router-link to="/contato">Contato</router-link></li>
+                    <!-- <li v-on:click="closeMenu"><router-link to="/contato">Contato</router-link></li> -->
                 </ul>
             </div>
         </nav>

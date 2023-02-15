@@ -18,6 +18,7 @@
                         <li>@input;</li>
                         <li>v-if;</li>
                         <li>v-else;</li>
+                        <li>v-for</li>
                     </ol>
                 </li>
                 <li>HTML5/CSS3/JS;</li>

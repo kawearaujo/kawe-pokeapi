@@ -1,13 +1,20 @@
 <template>
     <footer>
-        <a class="socialLink" v-for="(socialLink,index) in socialLinks" :key="index" :href="socialLink.link" target="_blank">
-            <img :src="socialLink.icon" :alt="socialLink.label" :title="socialLink.label">
+        <a class="socialLink" href="https://www.instagram.com/kawe_semsobrenome/" target="_blank">
+            <img src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/icons/instagram.svg" alt="socialLink.label" title="socialLink.label">
         </a>
+        <a class="socialLink" href="https://wa.me/+5574988189677" target="_blank">
+            <img src="../assets/whatsapp.png" alt="facebook" title="facebook">
+        </a>
+        <a class="socialLink" href="https://www.linkedin.com/in/kawearaujo/" target="_blank">
+            <img src="../assets/linkedin.png" alt="socialLink.label" title="socialLink.label">
+        </a>
+        <p>Todos Direitos Garantidos a Kawe, 2023</p>
     </footer>
 </template>
 
 <script>
-import api from '@/services/api';
+
 
 export default{
     name: 'FooterBar',
@@ -16,11 +23,7 @@ export default{
             socialLinks:[]
         }
     },
-    mounted(){
-        api.get('/social-links.json').then(response => {
-            this.socialLinks = response.data;
-        });
-    }
+    
 }
 </script>
 

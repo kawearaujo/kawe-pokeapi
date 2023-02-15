@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import api from '@/services/api';
+
 
 export default{
     name:'ContatoPage',
@@ -21,11 +21,6 @@ export default{
         return {
             contacts:[]
         }
-    },
-    mounted() {
-        api.get('/contacts.json').then(response=>{
-            this.contacts = response.data;
-        });
     }
 }
 </script>
@@ -33,6 +28,7 @@ export default{
 <style scoped>
   main{
     align-items: center;
+    background-color: var(--color-background-home);
   }
   contato{
     margin-bottom: 40px;
