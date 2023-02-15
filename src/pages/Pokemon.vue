@@ -9,9 +9,8 @@
             <h1>Pokedex - PokeAPI</h1>
             <label for="search">Buscar:</label>
             <input id="search" v-model="searchTerm" @input="search" />
-            <br>
             <div class="wrapPokemon" v-if="pokemon" >
-                <h2 >{{ pokemon.id }} - {{ pokemon.name }}</h2>
+                <h2 >#{{ pokemon.id }} {{ pokemon.name }}</h2>
                 <!-- <p>Number: {{ pokemon.id }}</p> -->
                 <img :src="pokemon.gif" :alt="pokemon.name" />
                 <h3>Tipos:</h3>
@@ -116,6 +115,7 @@ export default{
         color: var(--color-text-light);
         font-size: 18px;
     }
+    
     .wrapCard{
         display: flex;
         height: 250px;
@@ -128,15 +128,26 @@ export default{
         
     }
     .wrapPokemon {
+        margin-top:20px ;
         display: flex;
-        min-height: 250px;
-        /* margin-top:20px ;
-        padding-top: 20px; */
         flex-direction: column;
-        /* justify-content: center; */
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
-        background-color: rgb(205, 203, 207);
+        width: 250px;
+        height: 250px;
+        background-color: #ebf1f3;
+        border-radius: 8px;
+        box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        padding: 1rem;
+        transition: box-shadow 0.2s ease-in-out;
+    }
+    .wrapPokemon h2{
+        text-justify: distribute;
+    }
+
+    .wrapPokemon:hover {
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
     }
    
     @media  (min-width: 700px){

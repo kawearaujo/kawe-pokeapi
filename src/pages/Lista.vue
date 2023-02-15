@@ -9,7 +9,9 @@
         <img :src="pokemon.image" />
       </div>
       <div class="pokemon-details">
-        <div v-for="type in pokemon.types" :key="type.name" class="pokemon-type">{{ type.name }}</div>
+        <div v-for="(type , index) in pokemon.types" :key="index" class="pokemon-type">
+        {{ type.name }}
+        </div>
         <div class="pokemon-weight">{{ pokemon.weight }}kg</div>
       </div>
     </div>
@@ -43,7 +45,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .pokedex {
   display: flex;
   flex-wrap: wrap;
@@ -54,13 +56,14 @@ export default {
   padding: 1rem;
 }
 
+
 .pokemon {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 250px;
-  height: 350px;
+  height: 250px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
@@ -104,3 +107,5 @@ export default {
   max-width: 100%;
   max-height: 100%;
 }
+
+</style>
