@@ -45,7 +45,7 @@ export default{
 header{
     background-color: var(--color-background-nav);
     width: 100%;
-    height: 60px; 
+    height: 10vh; 
     display: flex;
     justify-content: center;
     align-items: center;

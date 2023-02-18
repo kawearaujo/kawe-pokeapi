@@ -30,23 +30,30 @@ export default{
 <style scoped>
     footer{
         width: 100%;
-        height: 60px;
+        height:8vh ;
         background-color: var(--color-background-nav);
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        bottom: 0;
     }
     .socialLink{
-        border: 2px solid var(--color-text-light);
+        /* border: 2px solid var(--color-text-light); */
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 40px;
-        width: 40px;
-        height: 40px;
+        border-radius: 20px;
+        width: 30px;
+        height: 30px;
         margin:0 10px;
     }
     .socialLink img{
         width: 20px;
+    }
+    p{
+        font-weight: 600;
+        color: white;
+        font-size: 12px;
     }
 </style>
