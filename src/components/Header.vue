@@ -2,14 +2,14 @@
     <header>
         <nav class="container">
             <a href="/">
-                <img id="logo" alt="logo" src="./../assets/logo.png">
-                <img id="pokedex" alt="logo" src="./../assets/pokedex_logo.png">
+                <img id="logo" alt="logo" src="./../assets/img/logo.png">
+                <img id="pokedex" alt="logo" src="./../assets/img/pokedex_logo.png">
             </a>
             <img v-on:click="openMenu" id="menu-button" alt="Abrir menu" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/menu.svg">
             <div v-on:click="closeMenu" id="menu-overlay" v-if="menuActive"></div>
             <div id="menu-items" :class="{active:menuActive}">
-                <img id="menu-logo1" alt="logo" src="./../assets/logo.png">
-                <img id="menu-logo" alt="menu-logo" src="./../assets/pokedex_logo.png">
+                <img id="menu-logo1" alt="logo" src="./../assets/img/logo.png">
+                <img id="menu-logo" alt="menu-logo" src="./../assets/img/pokedex_logo.png">
                 <ul>
                     <li v-on:click="closeMenu"><router-link to="/">Buscador</router-link></li>
                     <li v-on:click="closeMenu"><router-link to="/lista">Lista</router-link></li>

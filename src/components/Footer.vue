@@ -4,10 +4,10 @@
             <img src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/icons/instagram.svg" alt="socialLink.label" title="socialLink.label">
         </a>
         <a class="socialLink" href="https://wa.me/+5574988189677" target="_blank">
-            <img src="../assets/whatsapp.png" alt="facebook" title="facebook">
+            <img src="../assets/img/whatsapp.png" alt="facebook" title="facebook">
         </a>
         <a class="socialLink" href="https://www.linkedin.com/in/kawearaujo/" target="_blank">
-            <img src="../assets/linkedin.png" alt="socialLink.label" title="socialLink.label">
+            <img src="../assets/img/linkedin.png" alt="socialLink.label" title="socialLink.label">
         </a>
         <p>Todos Direitos Garantidos a Kawe, 2023</p>
     </footer>

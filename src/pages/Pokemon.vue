@@ -189,55 +189,55 @@ export default{
     }
    
     .fire{
-        background-image: url("../assets/arenaBg/fire.png");
+        background-image: url("../assets/img/fire.png");
         background-size: contain;
     }
     .water{
-        background-image: url("../assets/arenaBg/water.png");
+        background-image: url("../assets/img/water.png");
         background-size: contain;
     }
     .normal{
-        background-image: url("../assets/arenaBg/normal.png");
+        background-image: url("../assets/img/normal.png");
         background-size: contain;
     }
     .eletric{
-        background-image: url("../assets/arenaBg/normal.png");
+        background-image: url("../assets/img/normal.png");
         background-size: contain;
     }
     .grass{
-        background-image: url("../assets/arenaBg/leaf.png");
+        background-image: url("../assets/img/leaf.png");
         background-size: contain;
     }
     .bug{
-        background-image: url("../assets/arenaBg/leaf.png");
+        background-image: url("../assets/img/leaf.png");
         background-size: contain;
     }
     .flying{
-        background-image: url("../assets/arenaBg/flying.png");
+        background-image: url("../assets/img/flying.png");
         background-size: contain;
     }
     .ground{
-        background-image: url("../assets/arenaBg/ground.png");
+        background-image: url("../assets/img/ground.png");
         background-size: contain;
     }
     .leaf{
-        background-image: url("../assets/arenaBg/leaf.png");
+        background-image: url("../assets/img/leaf.png");
         background-size: contain;
     }
     .psychic, .dark{
-        background-image: url("../assets/arenaBg/psychic.png");
+        background-image: url("../assets/img/psychic.png");
         background-size: contain;
     }
     .rock{
-        background-image: url("../assets/arenaBg/rock.png");
+        background-image: url("../assets/img/rock.png");
         background-size: contain;
     }
     .ice{
-        background-image: url("../assets/arenaBg/ice.png");
+        background-image: url("../assets/img/ice.png");
         background-size: contain;
     }
     .fighting, .poison, .steel, .ghost{
-        background-image: url("../assets/arenaBg/normal.png");
+        background-image: url("../assets/img/normal.png");
         background-size: contain;
     }
     @media  (min-width: 700px){
