@@ -83,6 +83,7 @@ nav{
     width: 50px;
 }
 #menu-items{
+    z-index: 999;
     position: fixed;
     top: 0;
     right: 0;
