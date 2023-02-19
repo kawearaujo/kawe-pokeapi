@@ -8,11 +8,12 @@
                 <h2 >#{{ pokemon.id }} {{ pokemon.name }}</h2>
                 <!-- <p>Number: {{ pokemon.id }}</p> -->
                 <img :src="pokemon.gif" :alt="pokemon.name" />
-                <h3>Tipos:</h3>
                 <div v-if="pokemon.tipo2">
+                    <h3>Tipos:</h3>
                     <h4 >{{ pokemon.tipo1 }} - {{ pokemon.tipo2 }}</h4>
                 </div>
                 <div v-else>
+                    <h3>Tipos:</h3>
                     <h4 >{{ pokemon.tipo1 }}</h4> 
                 </div>
             </div>
@@ -108,7 +109,10 @@ export default{
 
 <style scoped>
    main{
-        background-color: var(--color-background-home);
+    background: linear-gradient(90deg, #d7f6fc, #ebffff);
+        animation: anim 2.5s infinite ease-in-out;
+        background-size: 400% 400%;
+        /* background-color: var(--color-background-home); */
         /* justify-content: center; */
         align-items: center;
         /* padding-top:40px; */
