@@ -6,7 +6,6 @@ Vue.use(VueRouter);
 import Pokemon from '@/pages/Pokemon';
 import Lista from '@/pages/Lista';
 import Sobre from '@/pages/Sobre';
-import Contato from '@/pages/Contatos';
 
 const routes = [
     {
@@ -21,10 +20,7 @@ const routes = [
         path:'/sobre', 
         component: Sobre
     },
-    {
-        path:'/contato', 
-        component: Contato
-    },
+   
 ];
 
 const router = new VueRouter({

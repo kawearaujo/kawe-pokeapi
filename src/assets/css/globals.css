@@ -1,0 +1,79 @@
+:root {
+  --color-background: #F3F3F3;
+  --color-background-head: rgb(46 46 46 / 50%);
+  /* --color-background-head: #d51251; */
+  --color-background-foot: rgb(46 46 46 / 50%);
+  --color-background-home: ;
+  --color-background-search:#ffffff;
+  --color-text-light: #EDEDED;
+  --color-text-title: #FF5555;
+  --color-text-dark: #3D3D3D;
+  }
+.dark{
+ --color-background-home:#3131319a;
+ --color-background-card: #746aab;
+ --color-text-title: #a650b3;
+ --color-text-geral: #ffffff;
+ --color-background-head:rgb(46 46 46 / 50%);
+ --color-background-foot:rgb(46 46 46 / 50%);
+ --color-background-search:#2E2E29;
+ --color-text-light: #EDEDED;
+ --color-text-dark: #EDEDED;
+}
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+  html,
+  body{
+    background-color:var(--color-background);
+    height: 100%;
+    margin: 0;
+    
+  }
+
+  a{
+    text-decoration:none;
+    transition: 0.2s opacity;
+}
+
+  a:hover{
+    opacity: 0.8;
+
+  }
+
+.container{
+    width: 90%;
+}
+@font-face {
+  font-family: "pokemon";
+  src: url("../font/PokemonSolid.ttf") format("truetype");
+  
+}
+@font-face {
+  font-family: "notosans";
+  src: url("../font/NotoSansBamum.ttf") format("truetype");
+  
+}
+@font-face {
+  font-family: "viminalis";
+  src: url("../font/Viminalis.otf") format("truetype");
+  
+}
+main{
+    width:100%;
+    min-height:calc(100vh - 120px);
+    display:flex;
+    flex-direction: column;
+
+}
+
+h1{
+  color:var(--color-text-title);
+  margin-top:40px 0;
+  font-size:30px;
+}
+

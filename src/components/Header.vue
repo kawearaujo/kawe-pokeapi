@@ -1,22 +1,25 @@
 <template>
     <header>
         <nav class="container">
-            <a href="/">
+            <router-link to="/" class="">
                 <img id="logo" alt="logo" src="./../assets/img/logo.png">
-                <img id="pokedex" alt="logo" src="./../assets/img/pokedex_logo.png">
-            </a>
-            <img v-on:click="openMenu" id="menu-button" alt="Abrir menu" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/menu.svg">
+                
+            </router-link>
+            
+            <img v-on:click="openMenu" id="menu-button" alt="Abrir menu" src="./../assets/img/menu.svg">
             <div v-on:click="closeMenu" id="menu-overlay" v-if="menuActive"></div>
             <div id="menu-items" :class="{active:menuActive}">
                 <img id="menu-logo1" alt="logo" src="./../assets/img/logo.png">
                 <img id="menu-logo" alt="menu-logo" src="./../assets/img/pokedex_logo.png">
                 <ul>
-                    <li v-on:click="closeMenu"><router-link to="/">Buscador</router-link></li>
-                    <li v-on:click="closeMenu"><router-link to="/lista">Lista</router-link></li>
-                    <li v-on:click="closeMenu"><router-link to="/sobre">Sobre</router-link></li>
-                    <!-- <li v-on:click="closeMenu"><router-link to="/contato">Contato</router-link></li> -->
+                    <li v-on:click="closeMenu" ><router-link to="/" class="fontHeader">Inicio</router-link></li>
+                    <li v-on:click="closeMenu" ><router-link to="/lista" class="fontHeader">Lista</router-link></li>
+                    <li v-on:click="closeMenu" ><router-link to="/sobre" class="fontHeader">Sobre</router-link></li>
+                    <button class="darkmode" @click="toggleTheme"><img  src="./../assets/img/dark.svg" alt=""></button>
                 </ul>
+                
             </div>
+            
         </nav>
     </header>
 </template>
@@ -29,41 +32,63 @@ export default{
             menuActive: false
         }
     },
+    mounted(){
+        const meta = document.createElement('meta')
+        meta.setAttribute('name', 'color-scheme')
+        meta.setAttribute('content', 'light')
+        document.head.appendChild(meta)
+    },
     methods:{
         openMenu: function(){
             this.menuActive = true
         },
         closeMenu: function(){
             this.menuActive = false
+        },
+        switchTheme: function(){
+            const theme= document.getElementById('theme').value;
+            this.meta[0].contet=theme;
+        },
+        toggleTheme() {
+            document.body.classList.toggle('dark')
         }
     }
 }
 </script>
 
 <style scoped>
-
+.darkmode {
+    background-color: transparent;
+    border:transparent;
+}
+.darkmode img{
+    width: 30px;
+}
 header{
-    background-color: var(--color-background-nav);
+    background-color: var(--color-background-head);
     width: 100%;
-    height: 10vh; 
+    height: 6vh; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #logo{
-    width: 50px;
+    width: 30px;
 }
 #pokedex{
     width: 150px;
 }
 #menu-button{
-    width: 30px;
+    width: 45px;
+    
 }
 nav{
     display: flex;
     justify-content: space-between;
     height: 60px;
-    align-items: center;;
+    align-items: center;
+    z-index: 1;
+    
 }
 #menu-overlay{
     position: fixed;
@@ -73,6 +98,7 @@ nav{
     height: 100vh;
     background-color: #000;
     opacity: 0.8;
+    z-index: 100;
 }
 #menu-logo{
     width: 110px;
@@ -83,21 +109,24 @@ nav{
     width: 50px;
 }
 #menu-items{
-    z-index: 999;
+    
     position: fixed;
     top: 0;
     right: 0;
-    background-color:var(--color-background-nav) ;
+    /* background-color:var(--color-background-head) ; */
     width: 60%;
     height: 100vh;
     display: none;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    
 }
 
 #menu-items.active{
     display: flex;
+    z-index: 999;
+    background-color: #a5a4a4;
 }
 
 ul{
@@ -110,6 +139,19 @@ ul li{
 
 ul li a{
     color: var(--color-text-light);
+}
+
+
+
+.fontHeader{
+  font-family: "notosans", sans-serif;
+  font-size: 19pt;
+  letter-spacing: 2px;
+  color: rgb(98, 98, 98);
+  text-decoration:solid;
+  font-weight: 100;
+  text-shadow: #000;
+  /* font-style:oblique; */
 }
 
 @media (min-width:700px) {
@@ -135,4 +177,23 @@ ul li a{
         margin-left: 20px;
     }
 }
+ @media (width < 500px) {
+    header{
+        height: 5vh;
+    }
+    #pokedex{
+        height: 4vh;
+        width: auto;
+        /* padding-left: 100px; */
+        /* margin-top: 5px; */
+        align-self: center;
+        
+    }
+    #logo{
+        height: 4vh;
+        width: auto;
+        margin-top: 10px;
+    }
+   
+} 
 </style>

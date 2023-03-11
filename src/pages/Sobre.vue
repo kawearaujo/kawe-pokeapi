@@ -4,7 +4,7 @@
             <br>
             <h1>Sobre</h1>
             <br>
-            <div class="sobre"  >
+            <div class="sobre">
                <p>Este é um projeto sem fins lucrativos, afim de aprofundar em estudos da framework VueJs.</p>
                <p>No projeto foi utilizado:</p>
                <ul>
@@ -12,7 +12,9 @@
                 <li>Consumo de API do PokeAPI : https://pokeapi.co ;</li>
                 <li>Axios para Realizar as Requisições para API ;</li>
                 <li>Vue Router para realizar o roteamento das páginas ;</li>
-                <li>AWS para Deploy na rede ;</li>
+                <li>Deploy no Netlify ;</li>
+                <li>Paginação</li>
+                <li>Debounce</li>
                 <li>Diretivas do Vue, como ;
                     <ol>
                         <li>@input;</li>
@@ -42,8 +44,9 @@ export default{
 <style scoped>
   main{
     align-items: center;
-    background-color: var(--color-background-home);
-    
+    /* background-color: var(--color-background-home);
+     */
+     background: var(--color-background-home);
   }
   section{
     width: 80%;
@@ -57,7 +60,7 @@ export default{
     color: var(--color-text-dark);
   }
   li,p{
-    color: var(--color-text-light);
+    color: var(--color-text-dark);
     font-size: 18px;
   }
 </style>

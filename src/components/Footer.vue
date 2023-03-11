@@ -30,8 +30,8 @@ export default{
 <style scoped>
     footer{
         width: 100%;
-        height:8vh ;
-        background-color: var(--color-background-nav);
+        height:4vh ;
+        background-color: var(--color-background-head);
         display: flex;
         justify-content: center;
         align-items: center;
