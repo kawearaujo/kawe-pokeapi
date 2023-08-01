@@ -98,7 +98,7 @@ nav{
     height: 100vh;
     background-color: #000;
     opacity: 0.8;
-    z-index: 100;
+    z-index: 9999;
 }
 #menu-logo{
     width: 110px;
@@ -125,8 +125,8 @@ nav{
 
 #menu-items.active{
     display: flex;
-    z-index: 999;
-    background-color: #a5a4a4;
+    z-index: 999999;
+    background-color: #a5a4a4;  
 }
 
 ul{
@@ -147,7 +147,7 @@ ul li a{
   font-family: "notosans", sans-serif;
   font-size: 19pt;
   letter-spacing: 2px;
-  color: rgb(98, 98, 98);
+  color: rgb(46, 46, 46);
   text-decoration:solid;
   font-weight: 100;
   text-shadow: #000;
@@ -166,6 +166,7 @@ ul li a{
         position: static;
         height: 60px;
         width: auto;
+        z-index: 999999;
     }
     ul{
         display: flex;

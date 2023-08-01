@@ -6,9 +6,9 @@
     <img class="background" src="../assets/img/fundo2.png" alt="">
     <div class="grid">
 
-        <div class="pokemon" v-for="pokemon in paginatedPokemons[1]" :key="pokemon.id" @click="showPokemonModal(pokemon)">
+        <div class="pokemon" v-for="pokemon in paginatedPokemons[1]" :key="pokemon.id" @click="showPokemonModal(pokemon)" width="5px">
 
-            <div class="backgroudPokemon" :class="pokemon.tipo1">
+            <div class="backgroudPokemon" :class="pokemon.tipo1" >
                 <div class="pokemon-number">
                     <p># {{ pokemon.number }}</p>
                 </div>

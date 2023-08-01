@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    
+    <!-- <div id="bac"></div> -->
+    <!-- <img class="background" src="./assets/img/fundo2.png" alt=""> -->
     <Header /> 
     <router-view path="$router.key" />
     <Footer /> 
@@ -17,6 +18,7 @@ import './assets/css/globals.css';
 import Header from './components/Header'
 import Footer from './components/Footer'
 
+
 export default {
   name: 'App',
   components: {
@@ -28,3 +30,19 @@ export default {
 </script>
 
 
+<style>
+#app {
+    top: 0;
+    left: 0;
+    position: fixed;
+    /* width: 100vw; */
+    z-index: 0;
+    background-size: contain;
+    width: -webkit-fill-available;
+    /* opacity: 0.3; */
+    user-select: none;
+    background-image: ;
+    background: url("./assets/img/fundo2.png") 0 0 repeat scroll   ;
+    /* background-image: ; */
+}
+</style>

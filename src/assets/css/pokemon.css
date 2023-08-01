@@ -44,7 +44,7 @@ h1 {
 }
 
 .body {
-    z-index: 1;
+    /* z-index: 1 !important; */
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -142,6 +142,7 @@ label {
     /* margin-bottom: 2rem;  */
     /* padding: 1rem; */
     transition: box-shadow 0.2s ease-in-out;
+    /* position: relative; */
     z-index: 2;
 }
 

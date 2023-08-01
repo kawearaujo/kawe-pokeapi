@@ -1,6 +1,6 @@
 <template>
 <main>
-    <img class="background" src="../assets/img/fundo2.png" alt="">
+    
     <div class="body">
         <!-- <h1>Pokedex - PokeAPI</h1> -->
         <div class="center"><img id="pokedex" alt="logo" src="./../assets/img/pokedex_logo.png"></div>
@@ -39,7 +39,7 @@
             <img class="card" src="../assets/img/cardSeach.png">
         </div>
     </div>
-
+    <!-- <img class="background" src="../assets/img/fundo2.png" alt=""> -->
 </main>
 </template>
 
